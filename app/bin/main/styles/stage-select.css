@@ -1,0 +1,41 @@
+/* 画面全体 */
+/* 画面全体 */
+.stage-select {
+    /* ステージ1と同じ森の画像を使う */
+    -fx-background-image: url("../images/bg_forest.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+    -fx-font-family: "Yu Gothic";
+    -fx-padding: 0;
+}
+
+/* 左上のタイトル */
+.stage-select .screen-title {
+    -fx-background-color: #f4b350;
+    -fx-text-fill: #777777;
+    -fx-font-size: 48px;
+    -fx-alignment: center;
+}
+
+/* 選択できる花 */
+.stage-select .stage-flower {
+    -fx-cursor: hand;
+}
+
+/* 花の中心を囲む選択枠 */
+.stage-select .selection-frame {
+    -fx-fill: transparent;
+    -fx-stroke: #e94338;
+    -fx-stroke-width: 11;
+}
+
+/* レイアウト編集モードの案内 */
+.layout-edit-banner {
+    -fx-background-color: #fff3cd;
+    -fx-text-fill: #664d03;
+    -fx-font-size: 35px;
+    -fx-padding: 17px 26px;
+    -fx-background-radius: 13px;
+}

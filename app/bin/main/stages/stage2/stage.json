@@ -1,0 +1,70 @@
+{
+  
+
+  "_name": "ステージの名前。ステージ選択の詳細パネルと、ゲーム画面の右上に出る。",
+  "name": "風の通り道",
+
+  "_description": "ステージ選択の詳細パネルに出る説明文。",
+  "description": "強い風が吹くステージ。風のタイミングを見て花に近づこう！",
+
+  "_difficulty": "難しさ（1〜5）。ステージ選択で★の数になる。",
+  "difficulty": 2,
+
+  "_preview": "ステージ選択の詳細パネルに出る画像のファイル名（拡張子なし）。このフォルダの images/ にあればそれ、無ければ共通の images/ のもの。無ければ「準備中」と表示。",
+  "preview": "stage_preview_2",
+
+  "_bgm": "BGM のファイル名（拡張子なし）。このフォルダの sounds/ にあればそれ、無ければ共通の sounds/bgm/ のもの。",
+  "bgm": "sky_blue",
+
+  "_background": "背景の画像のファイル名（拡張子なし）。このフォルダの images/ にあればそれ、無ければ共通の images/ のもの。",
+  "background": "bg_forest",
+
+  "_rank": "ランクの基準（秒）。この秒数より速くクリアするとそのランク。C より遅いと D。",
+  "rank": {
+    "SS": 15,
+    "S": 25,
+    "A": 45,
+    "B": 60,
+    "C": 75
+  },
+
+  "flower": {
+    "_rootX": "茎の根元の横の位置（px）。",
+    "rootX": 1300.0,
+
+    "_swayWidth": "通常の揺れの大きさ（px）。1メモリ = 40px とすると、左右に ±0.5メモリ。",
+    "swayWidth": 400,
+
+    "_swayPeriod": "揺れの1往復の秒数。",
+    "swayPeriod": 4,
+
+    "_flowerSize": "花の大きさ（px）。見た目だけなので、狙いやすさは hitRadius で変える。",
+    "flowerSize": 259.0,
+
+    "_texture": "花の画像の名前（拡張子なし）。このフォルダの images/ に置いた正面向きの花の画像を使う。画像の真ん中が蜜の入り口になり、茎の傾きに合わせて回る。空なら図形の花。",
+    "texture": "anemone",
+    "_textureSpin": "花の画像の回りの上乗せ。0 なら茎と同じだけ傾き、0.4 なら茎の傾きの 1.4 倍まで花が回る（花の真ん中が軸）。",
+    "textureSpin": 0.4,
+    "_textureCenterX": "花の画像の中で、花芯（蜜の入り口）が画像の真ん中から右へどれだけずれているか（画像の幅に対する %。左はマイナス）。花芯をリングの中心に合わせるために使う。0 なら真ん中。",
+    "textureCenterX": -0.7,
+    "_textureCenterY": "同じく、花芯が画像の真ん中から下へどれだけずれているか（画像の高さに対する %。上はマイナス）。",
+    "textureCenterY": -3.5
+  },
+
+  "_events": "tailwind = 突風のくり返し。アイドル7秒 → 突風4秒 をくり返し、突風の2秒前に「突風注意!!」を出す。細かい値の意味は TailwindEvent.java の上のコメントを参照。",
+  "events": [
+    {
+      "type": "tailwind",
+      "idleTime": 6,
+      "gustTime": 6,
+      "warnTime": 2,
+      "windSpeed": 12.0,
+      "accelScale": 1.0,
+      "maxSpeedScale": 2.0,
+      "tilt": 1.5,
+      "memory": 86,
+      "bounceTime": 1.5,
+      "se": "stages/stage2/sounds/tailwind"
+    }
+  ]
+}

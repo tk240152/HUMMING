@@ -1,0 +1,121 @@
+/* 詳細パネル本体は透明にして、背後の選択画面を見せる */
+.stage-detail-overlay {
+    -fx-background-color: transparent;
+    -fx-font-family: "Yu Gothic";
+}
+
+/* 中央から下に重ねる半透明の背景 */
+/* 詳細ウィンドウの背景 */
+.stage-detail-overlay .detail-shade {
+    -fx-background-image: url("../stage_Select_Win_Tex/Tex_SelectWin_BG.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+/* ① ステージ名 */
+.stage-detail-overlay .detail-stage-name {
+    -fx-background-color: #ecffcf;
+    -fx-background-radius: 65px;
+    -fx-text-fill: #111111;
+    -fx-font-size: 48px;
+    -fx-alignment: center;
+}
+
+/* ② ステージ画像の表示領域 */
+.stage-detail-overlay .detail-preview {
+    -fx-background-color: transparent;
+}
+
+/* 画像がない場合の案内 */
+.stage-detail-overlay .detail-preview-placeholder {
+    -fx-text-fill: #587581;
+    -fx-font-size: 52px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+/* ③ ベストタイムの見出し */
+.stage-detail-overlay .detail-record-title {
+    -fx-text-fill: white;
+    -fx-font-size: 60px;
+    -fx-alignment: center-left;
+}
+
+/* 評価ランク */
+/* 評価ランクの画像表示領域 */
+.stage-detail-overlay .detail-rank {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-alignment: center;
+}
+
+/* ベストタイムの数値 */
+.stage-detail-overlay .detail-time {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+    -fx-font-size: 125px;
+    -fx-alignment: center-left;
+}
+
+/* ④ 難易度の見出し */
+.stage-detail-overlay .detail-difficulty-title {
+    -fx-text-fill: white;
+    -fx-font-size: 56px;
+    -fx-alignment: center-left;
+}
+
+/* 難易度の星 */
+.stage-detail-overlay .detail-stars {
+    -fx-text-fill: #e9df50;
+    -fx-font-size: 91px;
+    -fx-alignment: center;
+}
+
+/* ⑤ ステージ説明 */
+.stage-detail-overlay .detail-description {
+    -fx-text-fill: white;
+    -fx-font-size: 45px;
+    -fx-alignment: top-left;
+}
+
+/* ⑥ ゲーム開始の案内 */
+/* ゲーム開始の案内画像 */
+.stage-detail-overlay .detail-start-guide {
+    -fx-background-image: url("../stage_Select_Win_Tex/Tex_SelectWin_Start.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+/* 編集中の操作案内 */
+.stage-detail-overlay .layout-edit-banner {
+    -fx-background-color: #fff3cd;
+    -fx-text-fill: #664d03;
+    -fx-font-size: 30px;
+    -fx-padding: 9px 22px;
+    -fx-background-radius: 13px;
+}
+
+/* 選択中のモジュールを囲む枠 */
+.stage-detail-overlay .layout-selection-frame {
+    -fx-fill: transparent;
+    -fx-stroke: #35c9ff;
+    -fx-stroke-width: 4.3px;
+    -fx-stroke-dash-array: 13px 9px;
+    -fx-stroke-type: inside;
+}
+
+/* 編集中だけ表示するグリッド */
+.stage-detail-overlay .layout-grid {
+    -fx-fill: transparent;
+    -fx-stroke: rgba(130, 210, 255, 0.3);
+    -fx-stroke-width: 1.5px;
+}
+
+/* 位置合わせに使用するガイド */
+.stage-detail-overlay .layout-alignment-guide {
+    -fx-stroke: #ff69c6;
+    -fx-stroke-width: 3.2px;
+    -fx-stroke-dash-array: 13px 6.5px;
+}
